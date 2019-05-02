@@ -1,21 +1,21 @@
 // GET All
 document.getElementById("get").addEventListener("click", async function() {
-    let response = await fetch("http://127.0.0.1:8090/recipeNames");
+    let response = await fetch("https://cryptic-cove-34092.herokuapp.com/recipeNames");
     let recipeNames = await response.json();
     // Uncomment this if you want to check if adding a recipe actually works! Or just spam "Show all recipes" until you see the one you added
     // console.log(recipeNames);
     
     
-    let response1 = await fetch("http://127.0.0.1:8090/recipeIngredients");
+    let response1 = await fetch("https://cryptic-cove-34092.herokuapp.com/recipeIngredients");
     let recipeIngredients = await response1.json();
     
-    let response2 = await fetch("http://127.0.0.1:8090/recipeCookingTimes");
+    let response2 = await fetch("https://cryptic-cove-34092.herokuapp.com/recipeCookingTimes");
     let recipeTimes = await response2.json();
 
-    let response3 = await fetch("http://127.0.0.1:8090/recipeShortenedMethods");
+    let response3 = await fetch("https://cryptic-cove-34092.herokuapp.com/recipeShortenedMethods");
     let recipeShortenedMethods = await response3.json();
 
-    let response4 = await fetch("http://127.0.0.1:8090/recipeMethods");
+    let response4 = await fetch("https://cryptic-cove-34092.herokuapp.com/recipeMethods");
     let recipeMethods = await response4.json();
     
     let i1 = Math.floor(Math.random()*recipeNames.length);
