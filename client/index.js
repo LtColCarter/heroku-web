@@ -44,19 +44,19 @@ document.getElementById("get").addEventListener("click", async function() {
 });
 
 document.getElementById("getSearchCategory1").addEventListener("click", async function() {
-    let response6 = await fetch("http://127.0.0.1:8090/recipeNames");
+    let response6 = await fetch("https://cryptic-cove-34092.herokuapp.com/recipeNames");
     let recipeNames = await response6.json();
     
-    let response1 = await fetch("http://127.0.0.1:8090/recipeIngredients");
+    let response1 = await fetch("https://cryptic-cove-34092.herokuapp.com/recipeIngredients");
     let recipeIngredients = await response1.json();
     
-    let response2 = await fetch("http://127.0.0.1:8090/recipeCookingTimes");
+    let response2 = await fetch("https://cryptic-cove-34092.herokuapp.com/recipeCookingTimes");
     let recipeTimes = await response2.json();
 
-    let response3 = await fetch("http://127.0.0.1:8090/recipeShortenedMethods");
+    let response3 = await fetch("https://cryptic-cove-34092.herokuapp.com/recipeShortenedMethods");
     let recipeShortenedMethods = await response3.json();
 
-    let response4 = await fetch("http://127.0.0.1:8090/recipeMethods");
+    let response4 = await fetch("https://cryptic-cove-34092.herokuapp.com/recipeMethods");
     let recipeMethods = await response4.json();
     
     let min = Math.ceil(0);
@@ -88,19 +88,19 @@ document.getElementById("getSearchCategory1").addEventListener("click", async fu
 });
 
 document.getElementById("getSearchCategory2").addEventListener("click", async function() {
-    let response6 = await fetch("http://127.0.0.1:8090/recipeNames");
+    let response6 = await fetch("https://cryptic-cove-34092.herokuapp.com/recipeNames");
     let recipeNames = await response6.json();
     
-    let response1 = await fetch("http://127.0.0.1:8090/recipeIngredients");
+    let response1 = await fetch("https://cryptic-cove-34092.herokuapp.com/recipeIngredients");
     let recipeIngredients = await response1.json();
     
-    let response2 = await fetch("http://127.0.0.1:8090/recipeCookingTimes");
+    let response2 = await fetch("https://cryptic-cove-34092.herokuapp.com/recipeCookingTimes");
     let recipeTimes = await response2.json();
 
-    let response3 = await fetch("http://127.0.0.1:8090/recipeShortenedMethods");
+    let response3 = await fetch("https://cryptic-cove-34092.herokuapp.com/recipeShortenedMethods");
     let recipeShortenedMethods = await response3.json();
 
-    let response4 = await fetch("http://127.0.0.1:8090/recipeMethods");
+    let response4 = await fetch("https://cryptic-cove-34092.herokuapp.com/recipeMethods");
     let recipeMethods = await response4.json();
     
     let min = Math.ceil(15);
@@ -131,19 +131,19 @@ document.getElementById("getSearchCategory2").addEventListener("click", async fu
 });
 
 document.getElementById("getSearchCategory3").addEventListener("click", async function() {
-    let response6 = await fetch("http://127.0.0.1:8090/recipeNames");
+    let response6 = await fetch("https://cryptic-cove-34092.herokuapp.com/recipeNames");
     let recipeNames = await response6.json();
     
-    let response1 = await fetch("http://127.0.0.1:8090/recipeIngredients");
+    let response1 = await fetch("https://cryptic-cove-34092.herokuapp.com/recipeIngredients");
     let recipeIngredients = await response1.json();
     
-    let response2 = await fetch("http://127.0.0.1:8090/recipeCookingTimes");
+    let response2 = await fetch("https://cryptic-cove-34092.herokuapp.com/recipeCookingTimes");
     let recipeTimes = await response2.json();
 
-    let response3 = await fetch("http://127.0.0.1:8090/recipeShortenedMethods");
+    let response3 = await fetch("https://cryptic-cove-34092.herokuapp.com/recipeShortenedMethods");
     let recipeShortenedMethods = await response3.json();
 
-    let response4 = await fetch("http://127.0.0.1:8090/recipeMethods");
+    let response4 = await fetch("https://cryptic-cove-34092.herokuapp.com/recipeMethods");
     let recipeMethods = await response4.json();
     
     let min = Math.ceil(9);
@@ -174,19 +174,19 @@ document.getElementById("getSearchCategory3").addEventListener("click", async fu
 });
 
 document.getElementById("getSearchCategory4").addEventListener("click", async function() {
-    let response6 = await fetch("http://127.0.0.1:8090/recipeNames");
+    let response6 = await fetch("https://cryptic-cove-34092.herokuapp.com/recipeNames");
     let recipeNames = await response6.json();
     
-    let response1 = await fetch("http://127.0.0.1:8090/recipeIngredients");
+    let response1 = await fetch("https://cryptic-cove-34092.herokuapp.com/recipeIngredients");
     let recipeIngredients = await response1.json();
     
-    let response2 = await fetch("http://127.0.0.1:8090/recipeCookingTimes");
+    let response2 = await fetch("https://cryptic-cove-34092.herokuapp.com/recipeCookingTimes");
     let recipeTimes = await response2.json();
 
-    let response3 = await fetch("http://127.0.0.1:8090/recipeShortenedMethods");
+    let response3 = await fetch("https://cryptic-cove-34092.herokuapp.com/recipeShortenedMethods");
     let recipeShortenedMethods = await response3.json();
 
-    let response4 = await fetch("http://127.0.0.1:8090/recipeMethods");
+    let response4 = await fetch("https://cryptic-cove-34092.herokuapp.com/recipeMethods");
     let recipeMethods = await response4.json();
 
     let min = Math.ceil(5);
@@ -223,7 +223,7 @@ document.getElementById("add_name").addEventListener("submit", async function(ev
 
     try {
         let name = document.getElementById("name").value;
-        let response = await fetch("http://127.0.0.1:8090/addName",
+        let response = await fetch("https://cryptic-cove-34092.herokuapp.com/addName",
             {
                 method: "POST",
                 headers: {
@@ -244,7 +244,7 @@ document.getElementById("add_time").addEventListener("submit", async function(ev
 
     try {
         let time = document.getElementById("time").value;
-        let response = await fetch("http://127.0.0.1:8090/addTime",
+        let response = await fetch("https://cryptic-cove-34092.herokuapp.com/addTime",
             {
                 method: "POST",
                 headers: {
@@ -265,7 +265,7 @@ document.getElementById("add_shortMethod").addEventListener("submit", async func
 
     try {
         let shortMethod = document.getElementById("shortMethod").value;
-        let response = await fetch("http://127.0.0.1:8090/addShortenedMethod",
+        let response = await fetch("https://cryptic-cove-34092.herokuapp.com/addShortenedMethod",
             {
                 method: "POST",
                 headers: {
@@ -287,7 +287,7 @@ document.getElementById("add_category").addEventListener("submit", async functio
 
     try {
         let category = document.getElementById("category").value;
-        let response = await fetch("http://127.0.0.1:8090/addCategory",
+        let response = await fetch("https://cryptic-cove-34092.herokuapp.com/addCategory",
             {
                 method: "POST",
                 headers: {
@@ -309,7 +309,7 @@ document.getElementById("add_method").addEventListener("submit", async function(
 
     try {
         let method = document.getElementById("method").value;
-        let response = await fetch("http://127.0.0.1:8090/addMethod",
+        let response = await fetch("https://cryptic-cove-34092.herokuapp.com/addMethod",
             {
                 method: "POST",
                 headers: {
