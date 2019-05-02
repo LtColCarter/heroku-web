@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang=en>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Testing Sidebar</title>
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css" integrity="sha384-9gVQ4dYFwwWSjIDZnLEWnxCjeSWFphJiwGPXr1jddIhOegiu1FwO5qRGvFXOdJZ4" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
+    <script defer src="https://use.fontawesome.com/releases/v5.0.13/js/solid.js" integrity="sha384-tzzSw1/Vo+0N5UhStP3bvwWPq+uvzCMfrN1fEFe+xBmv1C/AtVX5K0uZtmcHitFZ" crossorigin="anonymous"></script>
+    <script defer src="https://use.fontawesome.com/releases/v5.0.13/js/fontawesome.js" integrity="sha384-6OIrr52G08NpOFSZdxxz1xdNSndlD4vdcf/q2myIUVO0VsqaGHJsB0RaBE01VTOY" crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <div class="wrapper">
+        <nav id="sidebar">
+            <div class="sidebar-header">
+                <h3>Menu</h3>
+            </div>
+
+            <!-- Each one of these buttons will do a GET request to get the recipes that are categorised by the type specified on the button -->
+            <div class="col-1">
+            <ul class="list-unstyled components">
+                <li>
+                    <button id="getSearchCategory1" type="button" class="button"><span>Dinner </span></button>
+                </li>
+                <li>
+                    <button id="getSearchCategory2" type="button" class="button"><span>Baking </span></button>
+                </li>
+                <li>
+                    <button id="getSearchCategory3" type="button" class="button"><span>Dessert </span></button>
+                </li>
+                <li>
+                    <button id="getSearchCategory4" type="button" class="button"><span>Lunch </span></button>
+                </li>
+            </ul>
+            </div>    
+        </nav>
+
+        <div id="content">
+
+        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+            <div class="container-fluid">
+                <button type="button" id="sidebarCollapse" class="btn btn-info"><i class="fas fa-align-left"></i></button>
+                <button class="btn btn-dark d-inline-block d-lg-none ml-auto" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"><i class="fas fa-align-justify"></i></button>
+
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="nav navbar-nav ml-auto">
+                        <li class="nav-item active">
+                            <form action="#addingRecipe">
+                                <button type="submit" class="btn btn-light">Add a new recipe</button>
+                            </form>
+                        </li>
+                        <li class="nav-item">
+                            <button type="button" class="btn btn-light">Delete a recipe</button>
+                        </li>
+                        <li class="nav-item">
+                            <button id="get" type="button" class="btn btn-light">Show all recipes</button>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+
+        <!-- Featured Recipes on homepage -->
+        <button id="1stTitle" type="button" class="btn btn-light" data-toggle="modal" data-target="#firstModal">BLT Tortilla Wraps</button>      
+        <!-- Modal -->
+        <div class="modal fade" id="firstModal" tabindex="-1" role="dialog" aria-labelledby="1stModalTitle" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <div id="1stModalTitle"></div>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                    </div>
+                    <div class="modal-body">
+                        <p id="1stInside">1 - Place bacon in large frying pan, cook over medium-high heat until cooked, bacon is easy, I shouldn't have to tell you how to cook bacon! 2 - Microwave the tortillas for a few seconds to soften them up and make them warm. Spread the mayo and put some bacon in with lettuce and tomato. Fold sides of tortilla over and roll up. Cut each wrap in half before serving. Ingredients: bacon, tortillas, mayonnaise, lettuce, tomato. Cooking Time: 20</p>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="1stModalShortMethod">1 - Place bacon in large frying pan, cook over medium-high heat until cooked, bacon is easy, I shouldn't have to tell you how to cook bacon!</div>
+        <div class="line"></div>
+        <button id="2ndTitle" type="button" class="btn btn-light" data-toggle="modal" data-target="#secondModal">Classic Bangers and Mash</button>      
+        <!-- Modal -->
+        <div class="modal fade" id="secondModal" tabindex="-1" role="dialog" aria-labelledby="2ndModalTitle" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <div id="2ndModalTitle">Classic Bangers and Mash</div>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                    </div>
+                    <div class="modal-body">
+                        <p id="2ndInside">1 - Place potatoes in a pan and add enough water to cover. Bring to the boil and cook until tender (about 20 minutes). Drain potatoes and leave in pan. 2 - Meanwhile, stir in stock cubes into the warm milk until they dissolve. Stir the milk mixture and butter into the potatoes. Mash the potatoes until smooth and creamy. 3 - Heat little bit of cooking oil in a frying pan over medium-high heat. Prick the sausages in a few places with fork and place them in the pan. Cook, turning often, until golden brown and juices run clear (12-15 minutes). Remove from the pan and drain on kitchen roll. 4 - Use same pan and add onions. Cook and stir over medium heat until golden but still crisp. Add the gravy and heat through. 5 - To serve, scoop potatoes onto a large serving plate. Arrange the sausages over the potatoes, top with onions and gravy. Ingredients: potatoes, chicken, milk, butter, sausages, onions, gravy. Cooking Time: 55</p>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="2ndModalShortMethod">1 - Place potatoes in a pan and add enough water to cover. Bring to the boil and cook until tender (about 20 minutes). Drain potatoes and leave in pan.</div>
+        
+        <div class="line"></div>
+        <button id="3rdTitle" type="button" class="btn btn-light" data-toggle="modal" data-target="#thirdModal">Chocolate Sponge Cake</button>      
+        <!-- Modal -->
+        <div class="modal fade" id="thirdModal" tabindex="-1" role="dialog" aria-labelledby="3rdModalTitle" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <div id="3rdModalTitle">Chocolate Sponge Cake</div>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                    </div>
+                    <div class="modal-body">
+                        <p id="3rdInside">1 - Weigh your 3 eggs with their shells. Take tha weight and measure the same amount each for the sugar, butter and flour. Weigh the flour last. (For example if the eggs weigh 200g, then flour should weigh 200g, sugar 200g and same for butter). 2 - For the flour, remove 55g from the weight you measued. Add 55g of cocoa powder. Combine flour and cocao. 3 - Preheat oven to 170C, grease 2 sandwich tins and line with baking parchment. 4 - Put all of the butter and sugar into a large mixing bowl. Cream together until pale, creamy and fluffy. 5 - Crack 1 egg into mixture. Gently mix in the egg, don't want to over mix. Repeat process for 2nd and 3rd eggs. 6 - Sieve a couple of tablespoons of flour-cocoa mixture at a time into the mixing bowl with the other ingredients. Give it a stir. Try to get air into mixture whilst mixing. 7 - Divide mixture evenly between the 2 tins. Bake in preheated oven for 20 minutes. To make sure it has finished baking, use fingers to very lightly press on the top of the sponge, it should feel spongey and spring back. 8 - Remember to let the cake cool before icing or anything. Ingredients: eggs, sugar, butter, flour, cocoa powder. Cooking Time: 50</p>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="3rdModalShortMethod">1 - Weigh your 3 eggs with their shells. Take that weight and measure the same amount each for the sugar, butter and flour. Weigh the flour last. (For example if the eggs weigh 200g, then flour should weigh 200g, sugar 200g and same for butter).</div>
+
+        <div class="line"></div>
+        <button id="4thTitle" type="button" class="btn btn-light" data-toggle="modal" data-target="#fourthModal">KFC Chicken</button>      
+        <!-- Modal -->
+        <div class="modal fade" id="fourthModal" tabindex="-1" role="dialog" aria-labelledby="4thModalTitle" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <div id="4thModalTitle">KFC Chicken</div>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                    </div>
+                    <div class="modal-body">
+                        <p id="4thInside">1 - Mix all of seasoning ingredients together in bowl (minus chicken and egg). 2 - Take pieces of chicken and dip in a slightly beaten egg. Roll chicken in the mixed spices and fry in oil. 3 - Place fried chicken on baking ray and bake for about 45 minutes at 180C Ingredients: salt, paprika, flour, mustard, thyme, basil, chicken, eggs, ginger. Cooking Time: 70</p>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="4thModalShortMethod">1 - Mix all of seasoning ingredients together in bowl (minus chicken and egg).</div>
+
+    </div>
+</div>
+<div id="addingRecipe">
+    <form action="./addName" method="post" id="add_name">
+        <div>Recipe name to add: <input name="name" id="name"></div>
+        <input type="submit">
+    </form>
+    <form action="./addTime" method="post" id="add_time">
+        <div>Recipe cooking time to add: <input name="time" id="time"></div>
+        <input type="submit">
+    </form>
+    <form action="./addShortenedMethod" method="post" id="add_shortMethod">
+        <div>Recipe short method to add: <input name="shortMethod" id="shortMethod"></div>
+        <input type="submit">
+    </form>
+    <form action="./addMethod" method="post" id="add_method">
+        <div>Recipe method to add: <input name="method" id="method"></div>
+        <input type="submit">
+    </form>
+    <form action="./addCategory" method="post" id="add_category">
+        <div>Recipe category to add: <input name="category" id="category"></div>
+        <input type="submit">
+    </form>
+</div>
+
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js" integrity="sha384-cs/chFZiN24E4KMATLdqdvsezGxaGsi4hLGOzlXwp5UZB1LY//20VyM2taTB4QvJ" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js" integrity="sha384-uefMccjFJAIv6A+rW+L4AHf99KvxDjWSu1z9VI8SKNVmz4sk7buKt/6v9KI65qnm" crossorigin="anonymous"></script>
+    
+    <script src="index.js"></script>
+
+    <script>
+        $(document).ready(function () {
+            $('#sidebarCollapse').on('click', function () {
+                $('#sidebar').toggleClass('active');
+            });
+        });
+    </script>
+
+</body>
+
+</html>
