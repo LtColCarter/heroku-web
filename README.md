@@ -12,3 +12,7 @@
 ## __Eslint__
 
 * My .eslintrc.json specification file is attached. Just type in `npm install` once you've navigated to my folder in the CMD/Terminal and then just type `eslint [file name]` where the file name is one of; `app.js`, `index.js` or maybe `server.js`.
+
+## __Cloud Deployment__
+
+* Go to [https://cryptic-cove-34092.herokuapp.com/](https://cryptic-cove-34092.herokuapp.com/) to try out the cloud deployment of this web server. The HTTP requests are slightly slower seeing as they are being sent further than just your local machine!
